@@ -1,0 +1,30 @@
+{
+  "name": "stundenklingeln2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"http-server\" \"npm run watch\"",
+    "browserify": "browserify ./src/main.js > ./public/browser.js",
+    "watch": "watch 'npm run browserify' ./src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kaenigsion/stundenklingeln2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kaenigsion/stundenklingeln2/issues"
+  },
+  "homepage": "https://github.com/Kaenigsion/stundenklingeln2#readme",
+  "devDependencies": {
+    "http-server": "^0.12.3"
+  },
+  "dependencies": {
+    "browserify": "^17.0.0",
+    "concurrently": "^6.2.0",
+    "sort-array": "^4.1.4",
+    "watch": "^1.0.2"
+  }
+}
