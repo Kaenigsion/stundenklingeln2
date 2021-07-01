@@ -7,19 +7,27 @@ body {
 
 .timeDiv {
     position: relative;
-     height: 20%;
-     width: 20%;
-     margin: 40%;
-     border: none;
-     perspective: 100px;
+    margin: 20%;
+    width: 60%;
+    border: none;
+    perspective: 150px;
 }
 
 .testDiv {
-    padding: 10%;
-    position: absolute;
+    margin: 20%;
+    width: auto;
+    position: static;
     border: none;
-    background-color: red;
-    background: rgba(100,100,100,0.5); 
+    background: rgba(100,100,100,0); 
     transform-style: preserve-3d;
-    transform: rotateX(25deg);
+    transform: rotateX(40deg);
+}
+
+.timeP {
+    color: azure; 
+    text-align: center;
+    font-size: 100px; 
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 100;
+    text-shadow: 0px 0px 10px #ffffff;
 }

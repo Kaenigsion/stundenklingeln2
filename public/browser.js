@@ -441,17 +441,33 @@ var result = sortArray(partsOfTheDay)
 console.log("resultasdasdasd2:")
 console.log(result)
 },{"sort-array":1}],3:[function(require,module,exports){
-console.log("glow")
+
 },{}],4:[function(require,module,exports){
 require('./bla')
 require('./glow')
 require('./time')
 },{"./bla":2,"./glow":3,"./time":5}],5:[function(require,module,exports){
-function getTime() {
-    let timeDate = new Date
-    let time = timeDate.toTimeString()
-    document.getElementById("time").innerHTML = time
+function RefreshTime() {
+
+    function addZero(i) {
+        if (i < 10) {
+            i = "0" + i
+        }
+        return i
+    }
+
+    function getTime() {
+        let timeDate = new Date
+        let timeHours = addZero(timeDate.getHours())
+        let timeMinutes = addZero(timeDate.getMinutes())
+        let timeSeconds = addZero(timeDate.getSeconds())
+
+        document.getElementById("time").innerHTML = timeHours + ":" + timeMinutes + ":" + timeSeconds
+    }
+
+    let timer = setInterval(getTime, 1000)
+
 }
 
-let timer = setInterval(getTime, 1000)
+RefreshTime()
 },{}]},{},[4]);
