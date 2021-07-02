@@ -4,5 +4,5 @@ var partsOfTheDay = ['twilight', 'afternoon', 'morning', 'evening']
 
 var result = sortArray(partsOfTheDay)
 
-console.log("resultasdasdasd2:")
+console.log("buh")
 console.log(result)
