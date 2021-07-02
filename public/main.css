@@ -13,7 +13,7 @@ body {
     perspective: 150px;
 }
 
-.testDiv {
+.perspDiv {
     margin: 20%;
     width: auto;
     position: static;
@@ -30,4 +30,15 @@ body {
     font-family: 'Courier New', Courier, monospace;
     font-weight: 100;
     text-shadow: 0px 0px 10px #ffffff;
+    margin-bottom: 0px;
+}
+
+.dateP {
+    color: aliceblue; 
+    text-align: center;
+    margin-top: 0px;
+    text-shadow: 0px 0px 10px #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 100;
+    font-size: 25px;
 }

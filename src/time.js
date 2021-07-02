@@ -13,7 +13,10 @@ function RefreshTime() {
         let timeMinutes = addZero(timeDate.getMinutes())
         let timeSeconds = addZero(timeDate.getSeconds())
 
+        let timeDay = timeDate.toDateString()
+
         document.getElementById("time").innerHTML = timeHours + ":" + timeMinutes + ":" + timeSeconds
+        document.getElementById("day").innerHTML = timeDay
     }
 
     let timer = setInterval(getTime, 1000)
