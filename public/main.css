@@ -5,55 +5,70 @@ body {
     background-repeat: no-repeat;
 }
 
+.top {
+    font-family: 'Courier New', Courier, monospace;
+    color: aliceblue;
+    text-shadow: 0px 0px 10px #ffffff;
+    text-align: center;
+}
+
 .timeDiv {
     position: relative;
     margin: 20%;
-    width: 60%;
-    border: none;
+    margin-bottom: 11vw;
     perspective: 150px;
 }
 
 .perspDiv {
-    margin: 20%;
-    width: auto;
-    position: static;
-    border: none;
-    background: rgba(100,100,100,0); 
-    transform-style: preserve-3d;
-    transform: rotateX(40deg);
+    transform: rotateX(30deg);
 }
 
 .timeP {
-    color: azure; 
-    text-align: center;
-    font-size: 110px; 
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: 100;
-    text-shadow: 0px 0px 10px #ffffff;
+    font-size: 10vw;
     margin-bottom: 0px;
 }
 
 .dateP {
-    color: aliceblue; 
-    text-align: center;
     margin-top: 0px;
-    text-shadow: 0px 0px 10px #ffffff;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: 100;
-    font-size: 25px;
+    font-size: 2vw;
 }
 
-.StundenklignelnDiv {
-    margin-top: 15%;
-    margin-bottom: 20%;
+.nextRing {
+    margin-right: 25vw;
+    margin-left: 25vw;
+    font-size: 5vw;
+}
+
+.settingsDiv {
+    margin-top: 30%;
     margin-left: 3%;
 
-    padding-top: 10%;
-    padding-bottom: 10%;
-    padding-left: 15%;
-    padding-right: 15%;
+    padding: 5px;
 
-    float: left;
+    max-width: 40%;
+    height: 15vw;
     background: rgba(255, 255, 255, 0.1);
-    color: white;
+    color: aliceblue;
+    border-radius: 20px;
+}
+
+.settingsSchulmodusDiv {
+    margin: 1vw;
+    font-size: 2vw;
+    text-shadow: 0px 0px 15px #ffffff;
+}
+
+.checkboxClassDiv {
+    height: 10vw;
+    width: 3vw;
+    float: right;
+    margin-right: 3vw;
+    border: 10px, solid, red
+}
+
+.checkboxClass {
+    height: 2vw;
+    width: 2vw;
+    box-shadow: 0px 0px 10px #ffffff;
+
 }
