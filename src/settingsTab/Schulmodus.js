@@ -24,7 +24,7 @@ function test() {
         SchulmodusLabelVar.style.textShadow = "0px 0px 15px rgba(61, 255, 61)"
     } else {
         SchulmodusLabelVar.innerHTML = "Der Schulmodus ist deaktiviert."
-        SchulmodusLabelVar.style.color = "rgba(255, 0, 0)"
+        SchulmodusLabelVar.style.color = "rgba(254, 0, 0)"
         SchulmodusLabelVar.style.textShadow = "0px 0px 15px rgba(255, 0, 0)"
     }
 }
