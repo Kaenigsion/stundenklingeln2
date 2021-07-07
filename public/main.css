@@ -1,5 +1,5 @@
 body {
-    background-image: url("./pictures/background.png");
+    background-image: url("./files/background.png");
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -15,7 +15,8 @@ body {
 .timeDiv {
     position: relative;
     margin: 20%;
-    margin-bottom: 11vw;
+    margin-top: 10vw;
+    margin-bottom: 9vw;
     perspective: 150px;
 }
 
@@ -33,19 +34,21 @@ body {
     font-size: 2vw;
 }
 
-.nextRing {
-    margin-right: 25vw;
-    margin-left: 25vw;
+.nextRingClass {
+    margin-bottom: 25vw;
+    margin-left: 15vw;
+    margin-top: 0px;
     font-size: 5vw;
+    height: 10vw;
+    max-width: 20vw;
 }
 
 .settingsDiv {
-    margin-top: 30%;
     margin-left: 3%;
 
     padding: 5px;
 
-    max-width: 40%;
+    max-width: 37%;
     height: 15vw;
     background: rgba(255, 255, 255, 0.1);
     color: aliceblue;
@@ -55,15 +58,13 @@ body {
 .settingsSchulmodusDiv {
     margin: 1vw;
     font-size: 2vw;
-    text-shadow: 0px 0px 15px #ffffff;
 }
 
 .checkboxClassDiv {
     height: 10vw;
     width: 3vw;
+    margin-right: 1vw;
     float: right;
-    margin-right: 3vw;
-    border: 10px, solid, red
 }
 
 .checkboxClass {
