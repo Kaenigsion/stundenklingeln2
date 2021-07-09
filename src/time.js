@@ -1,14 +1,23 @@
 
-let timer = setInterval(getTime, 1000)
+setInterval(getTime, 1000)
 
 
 window.addEventListener("load", function () {
 
 
     document.getElementById("SchulmodusCheckboxId").addEventListener("change", function () {
-        nextRingFun(getTime())
+        nextRingFun()
+        let timer = setInterval(TimerFunc, 1000)
+        if (document.getElementById("SchulmodusCheckboxId").checked == false) {
+            clearInterval(timer)
+        }
     })
 })
+
+function TimerFunc() {
+    nextRingFun(getTime(0))
+    stundenKlingelnStarten(getTime(1))
+}
 
 
 
@@ -20,22 +29,28 @@ function addZero(i) {
     return i
 }
 
-function getTime() {
+function getTime(whatToReturn) {
     let timeDate = new Date
     let timeHours = addZero(timeDate.getHours())
     let timeMinutes = addZero(timeDate.getMinutes())
     let timeSeconds = addZero(timeDate.getSeconds())
 
     let timeDay = timeDate.toDateString()
+    let timeString = timeHours + ":" + timeMinutes + ":" + timeSeconds
 
-    document.getElementById("time").innerHTML = timeHours + ":" + timeMinutes + ":" + timeSeconds
+    document.getElementById("time").innerHTML = timeString
     document.getElementById("day").innerHTML = timeDay
-    return timeMinutes, timeHours
+
+    if (whatToReturn == 0) {
+        return timeMinutes, timeHours
+    } else if (whatToReturn == 1) {
+        return timeString
+    }
 }
 
 function nextRingFun(min, h) {
     let SchulmodusCheckboxVar = document.getElementById("SchulmodusCheckboxId").checked
-    let nextRing = "gg"
+    let nextRing = "easter egg ;)"
     let StundeBox
 
     if (SchulmodusCheckboxVar == true) {
@@ -67,7 +82,7 @@ function nextRingFun(min, h) {
             nextRing = "13:20"
             StundeBox = "6. Stunde"
         } else {
-            nextRing = '7:40'
+            nextRing = "7:40"
             StundeBox = "Pause (18 h 20 min)"
         }
     } else { nextRing = "" }
@@ -81,67 +96,71 @@ function stundenKlingelnStarten(timeString) {
         //1.Stunde
         case "07:40:00":
             Klingeln(0)
-            break
+            break;
 
         case "08:25:00":
             Klingeln(1)
-            break
+            break;
 
         //2.Stunde
         case "08:35:00":
             Klingeln(0)
-            break
+            break;
 
         case "09:20:00":
             Klingeln(1)
-            break
+            break;
 
         //3.+4. Stunde
         case "09:40:00":
             Klingeln(0)
-            break
+            break;
 
         case "11:10:00":
             Klingeln(1)
-            break
+            break;
 
         //5.Stunde
         case "11:20:00":
             Klingeln(0)
-            break
+            break;
 
         case "12:05:00":
             Klingeln(1)
-            break
+            break;
 
         //6. Stunde
         case "12:35:00":
             Klingeln(0)
-            break
+            break;
 
         case "13:20:00":
             Klingeln(2)
-            break
-
-        case "18:13:20":
-            Klingeln(2)
-            break
+            break;
     }
+
+    console.log(timeString)
 }
 
 function Klingeln(typeOfRing) {
     let ring
+    let RingItSelf
     // volume = volume / 100
     //Stunde
+    if (!typeOfRing) {
+        return
+    }
+
     if (typeOfRing == 0) {
-        ring = document.getElementById("lessonAudio")
+        RingItSelf = "/files/Stundenkligneln.mp3"
     } else if (typeOfRing == 1) {
-        ring = document.getElementById("breakAudio")
+        RingItSelf = "/files/Pausenkligneln.mp3"
         //Pause
     } else if (typeOfRing == 2) {
-        ring = document.getElementById("lastBreakAudio")
+        RingItSelf = "/files/letztesPausenklingeln.mp3"
     } //letzte Pause
 
+    ring = new Audio(RingItSelf)
     ring.play()
     // Audio.volume = volume
 }
